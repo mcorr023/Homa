@@ -1662,6 +1662,6 @@ int homa_timer_main(void *transportInfo)
 		homa_timer(homa);
 	}
 	hrtimer_cancel(&hrtimer);
-	kthread_complete_and_exit(&timer_thread_done, 0);
+	complete_and_exit(&timer_thread_done, 0);
 	return 0;
 }
